@@ -136,6 +136,24 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+    
+}
+.ex-12-top-white,.ex-12-bottom-white{
+    animation: muovi_bianco 10s linear;
+}
+@keyframes muovi_bianco{
+    0% {
+        left: 0px;
+    }
+    25%{
+        left:calc(100%-30px) ;
+    }
+    50% {
+        left: calc(100% - 60px);
+    }
+    100% {
+        left: 100%;
+    }
 }
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
@@ -145,3 +163,57 @@
     width: 60px;
     height: 20px;
 }
+
+.ex-13-button:hover .ex-13-top-white {
+    animation: moveTopWhiteCompletely 20s linear;
+}
+@keyframes moveTopWhiteCompletely {
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+    25% {
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+    50% {
+        left: calc(100% - 30px);
+        top: 100%;
+    }
+    75% {
+        left: 0;
+        top: 100%;
+    }
+    
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+}
+.ex-13-button:hover .ex-13-bottom-white{
+    animation: movebottomWhiteCompletely 20s linear;
+} 
+@keyframes movebottomWhiteCompletely {
+    0% {
+        right: 20%;
+       bottom: -10px;
+    }
+    25% {
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+    50% {
+        right: calc(100% - 30px);
+        bottom: 100%;
+    }
+    75% {
+        right: 0;
+        bottom: 100%;
+    }
+    
+    100% {
+        right: 20%;
+        bottom: -10px;
+    }
+}
+/* problemi solo con l'ultimo */
